@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'SecondRoute.dart';
+import 'EducationRoute.dart';
 
 BoxDecoration titleDecoration = BoxDecoration(
     border: Border(
@@ -31,12 +31,18 @@ class HomeRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color(0xff9700b2),
+        title: Text(
+          'My Info',
+        ),
+      ),
       floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: Color(0xffea2893),
-        icon: Icon(Icons.call),
-        label: Text('Contact Me'),
+        backgroundColor: Color(0xff9700b2),
+        icon: Icon(Icons.school),
+        label: Text('Education'),
         onPressed: () {
-          Navigator.push(context, new MaterialPageRoute(builder: (context) => SecondRoute()),);
+          Navigator.push(context, new MaterialPageRoute(builder: (context) => EducationRoute()),);
         }
       ),
       backgroundColor: Colors.black,
@@ -47,7 +53,7 @@ class HomeRoute extends StatelessWidget {
           Align(
             alignment: Alignment.topCenter,
             child: Container(
-//              height: 200,
+              height: 200,
               width: double.infinity,
               margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
               decoration: BoxDecoration(
@@ -95,7 +101,6 @@ class HomeRoute extends StatelessWidget {
                             style: TextStyle(
                               fontFamily: "Sans",
                               fontSize: 30,
-                              fontWeight: FontWeight.bold,
                               color: Colors.white,
                             ),
                           ),
@@ -123,7 +128,7 @@ class HomeRoute extends StatelessWidget {
             ),
           ),
           Align(
-            alignment: Alignment.topCenter,
+            alignment: Alignment.center,
             child: Container(
               height: 200,
               width: double.infinity,
@@ -150,7 +155,7 @@ class HomeRoute extends StatelessWidget {
                         'About Me:',
                         style: TextStyle(
                           fontFamily: "Sans",
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w600,
                           fontSize: 25,
                           color: Colors.white,
                         ),
@@ -163,7 +168,7 @@ class HomeRoute extends StatelessWidget {
                       alignment: Alignment.center,
                       width: double.infinity,
                       height: 140,
-                      margin: EdgeInsets.only(top: 10),
+                      margin: EdgeInsets.all(10),
                       child: Text(
                         'Hi there! This is supposed to be my Bio.',
                         style: TextStyle(
